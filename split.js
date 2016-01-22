@@ -7,8 +7,8 @@ var split = function(s, t){
 		if(s[i]===t){
 			k = k + 1;
 			p[k] = '';
-			} else {
-				p[k] = p[k] + s[i];
+		} else {
+			p[k] = p[k] + s[i];
 		}
 	}
 	return p;
