@@ -13,13 +13,15 @@ var split = function(s, t){
 	}
 	return p;
 };
-//TESTS
-if (JSON.stringify(split('ak sa na', ' '))!=='["ak","sa","na"]'){
-	console.log("failed split #1")
-}	
-if (JSON.stringify(split('z.z.z.z', '.'))!=='["z","z","z","z"]'){
-	console.log("failed split #2")
-}	
-if (JSON.stringify(split(' p', 'p'))!=='[" ",""]'){
-	console.log("failed split #3")
-}		
+
+var test = function(){
+	if (JSON.stringify(split('ak sa na', ' '))!=='["ak","sa","na"]'){
+		console.log("failed split #1");
+	} else 	if (JSON.stringify(split('z.z.z.z', '.'))!=='["z","z","z","z"]'){
+		console.log("failed split #2");
+	} else 	if (JSON.stringify(split(' p', 'p'))!=='[" ",""]'){
+		console.log("failed split #3");
+	} else {
+		console.log('it works like a fkn clock!');
+	}		
+};
