@@ -22,7 +22,7 @@ var number_of_powers = function(a,b,c){ // a - starting digit, b - ending digit,
 var tests = function(){
 	var i, input, got, want, cases;
 	cases = [
-		[0,0,0, 0],
+		[2,2,1, 1],
 		[1,1,1, 1],
 		[1,1,2, 0],
 		[1000,9999,3, 12],
