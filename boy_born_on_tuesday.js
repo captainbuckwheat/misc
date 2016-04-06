@@ -1,6 +1,6 @@
 /*
 “I have two children. One is a boy born on a Tuesday. What is the probability I have two boys?”
-(Gary Foshee @ G4G)
+(Gary Foshee @G4G9)
 Based on n cases. The higher the n - the more reliable and accurate the answer.  
 */
 
