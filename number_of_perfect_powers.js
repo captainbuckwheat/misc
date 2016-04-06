@@ -1,12 +1,14 @@
-/* Example:
-  How many 4-digit numbers are perfect cubes?
+/* 
+How many perfect powers are between a and b  - where a and b are positive integeres and b is greater than a. 
+	Example:
+        How many 4-digit numbers are perfect cubes?
 (AOPS Counting & Probability)
 */
 
 var number_of_powers = function(a,b,c){ // a - starting digit, b - ending digit, c - power
 	var i, j, sum; 
 	sum = 0;
-	if (c===1){return b};
+	if (c===1){return b-a+1};
 	for (i = b; i >= a; i--){
 		for (j = 2; j <= i; j++){
 			if (Math.pow(j,c) === i){
