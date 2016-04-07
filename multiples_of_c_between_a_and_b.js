@@ -4,16 +4,16 @@ Example question:
 	How many multiples of 3 are between 62 and 215 (from AOPS Counting & Probability)
 */ 
 
-var multiples = function(a,b,c){ // a - first digit; b - last digit; c - divisor
-	var sum,i;
+var multiples = function(a, b, c) { // a - first digit; b - last digit; c - divisor
+	var sum, i;
 	sum = 0; 
-	for (i = a; i <= b; i++){
-		if (i % c === 0){ sum = sum + 1; }
+	for (i = a; i <= b; i++) {
+		if (i % c === 0) sum = sum + 1;
 	}
 	return sum;  
 }
 
-var test_multiples  = function(){
+var test_multiples  = function() {
 	var i, input, got, want, cases;
 	cases = [
 		[0,0,0, 0],
