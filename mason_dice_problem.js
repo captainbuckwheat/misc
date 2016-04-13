@@ -8,7 +8,7 @@ that will be obtained?
 var over_12 = function() {
 	var sum; 
 	sum = 0;
-	while (true){
+	while (true) {
 		sum = (Math.floor(Math.random()*(6 - 1 + 1)) + 1)+sum;
 		if (sum > 12) return sum
 	}
@@ -16,11 +16,9 @@ var over_12 = function() {
 
 var run_over_12 = function(n) { //where n is the number of rolls (the higher is n the more accuarte probability will be)
 	var i, count;
-	count = [];
-	for (i = 0; i < 6; i++) count[i] = 0; //because the only possible sums are 13 through 18, so there should be 6 slots for sums 
-	for (i = 0; i < n; i++){
-		count[over_12()-13]++ // since slots 0 through 5 are responsible for sums 13 through 18, so i in count[i] = sum-13
-	}
+	count = []; //histogram
+	for (i = 0; i < 6; i++) count[i] = 0; //because the only possible sums are 13 through 18, so there histogram has 6 slots for sums 
+	for (i = 0; i < n; i++) count[over_12()-13]++ // since slots 0 through 5 are responsible for sums 13 through 18, so i in count[i] = sum-13
 	for (i = 0; i < count.length; i++) count[i] /= n; // which is 18-13+1 = 6,we can just say 6 instead of count.length
 	return count; 
 }
