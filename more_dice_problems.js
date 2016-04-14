@@ -2,6 +2,7 @@
 
 a) suppose we have 2 fair six-sided dice. if we roll them both what is the probabilty the two nubers shown sum up to 7? (AOPS Counting & Probability)
 b) on average, how many times must a 6-sided die be rolled until a 6 turns up?
+c) on average, how many times must a 6-sided die be rolled until a 6 turns up twice in a row?
 */
 
 //a)
