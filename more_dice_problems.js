@@ -39,7 +39,7 @@ var sum_dice_1 = function(dice, n) { //where dice is # of dice & n is # of cases
 
 //b)
 
-var dice_side = function (a,sides) {
+var dice_side = function (a,sides,n) {
 	var i, j, k, success_rolls_k, success_rolls, side, count, roll, sum, k_sum; 
 	success_rolls_k = [];
 	sum_k = 0;
@@ -48,7 +48,7 @@ var dice_side = function (a,sides) {
 		roll = 0; 
 		j = 0;
 		sum = 0;
-		for (i = 0; i < sides*10; i++) { //for 6 sided dice it will have 60 trials per k; trialls = success rolls. 
+		for (i = 0; i < n; i++) { //for 6 sided dice it will have 60 trials per k; trialls = success rolls. 
 			while(true){
 				side = Math.floor(Math.random()*sides + 1); //assuming all sides are distinct and consecutive from 1 to sides
 				roll++; //counting every time we roll
