@@ -66,7 +66,7 @@ var dice_side_in_a_row = function (a,sides,n) {
 	sum = 0;
 	for (i = 0; i < n; i++) { 
 		roll = 0;
-		count_roll = 0;  
+		count_roll = undefined;  
 		while(true) {
 			roll++; //counting every time we roll
 			side = Math.floor(Math.random()*sides + 1); //assuming all sides are distinct and consecutive from 1 to sides
@@ -90,7 +90,7 @@ var dice_a_b = function (a,b,sides,n) { //a is the first face, b is the second d
 	sum = 0;
 	for (i = 0; i < n; i++) { 
 		roll = 0;
-		count_roll = 0;  
+		count_roll = undefined;  
 		while(true) {
 			roll++; //counting every time we roll
 			side = Math.floor(Math.random()*sides + 1); //assuming all sides are distinct and consecutive from 1 to sides
