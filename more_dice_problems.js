@@ -94,11 +94,10 @@ var dice_a_b = function (a,b,sides,n) { //a is the first face, b is the second d
 		while(true) {
 			roll++; //counting every time we roll
 			side = Math.floor(Math.random()*sides + 1); //assuming all sides are distinct and consecutive from 1 to sides
-			if (side === b && roll === count_roll+1){
+			if (side === b && roll === count_roll+1) {
 				sum+= roll; // the roll on which side a showed up 2nd time in a row
 				break
 			} else if (side === a) count_roll = roll; 
-			
 		}
 	}
 	return sum/n; 
