@@ -3,6 +3,7 @@
 a) suppose we have 2 fair six-sided dice. if we roll them both what is the probabilty the two nubers shown sum up to 7? (AOPS Counting & Probability)
 b) on average, how many times must a 6-sided die be rolled until a 6 turns up?
 c) on average, how many times must a 6-sided die be rolled until a 6 turns up twice in a row?
+d) On average, how many times must a 6-sided die be rolled until the sequence 65 appears (i.e., a 6 followed by a 5)?
 */
 
 //a)
@@ -57,3 +58,48 @@ var dice_side = function (a,sides,n) {
 }
 //the simple answer: for a fair dice in which there's an equally likely chance of landing on any face; 
 //the answer should always be the number of the sides for any face. 
+
+//c)
+
+var dice_side_in_a_row = function (a,sides,n) {
+	var i, side, roll, sum, count; 
+	sum = 0;
+	for (i = 0; i < n; i++) { //for 6 sided dice it will have 60 trials per k; trialls = success rolls. 
+		roll = 0;
+		count_roll = 0;  
+		while(true) {
+			roll++; //counting every time we roll
+			side = Math.floor(Math.random()*sides + 1); //assuming all sides are distinct and consecutive from 1 to sides
+			if (side === a && roll === count_roll+1){
+				sum+= roll; // the roll on which side a showed up 2nd time in a row
+				break
+			} else if (side === a) count_roll = roll; 
+			
+		}
+	}
+	return sum/n; 
+}
+
+
+//d)
+
+// Here we can see that the answer should be significantly lower than the answer to the previous problem becaue 6 & 5 have a particular order, while 6 & 6 do not. 
+
+var dice_a_b = function (a,b,sides,n) { //a is the first face, b is the second distinct face
+	var i, side, roll, sum, count; 
+	sum = 0;
+	for (i = 0; i < n; i++) { //for 6 sided dice it will have 60 trials per k; trialls = success rolls. 
+		roll = 0;
+		count_roll = 0;  
+		while(true) {
+			roll++; //counting every time we roll
+			side = Math.floor(Math.random()*sides + 1); //assuming all sides are distinct and consecutive from 1 to sides
+			if (side === b && roll === count_roll+1){
+				sum+= roll; // the roll on which side a showed up 2nd time in a row
+				break
+			} else if (side === a) count_roll = roll; 
+			
+		}
+	}
+	return sum/n; 
+}
