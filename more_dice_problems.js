@@ -43,7 +43,7 @@ var sum_dice_1 = function(dice, n) { //where dice is # of dice & n is # of cases
 var dice_side = function (a,sides,n) {
 	var i, side, roll, sum; 
 	sum = 0;
-	for (i = 0; i < n; i++) { //for 6 sided dice it will have 60 trials per k; trialls = success rolls. 
+	for (i = 0; i < n; i++) { 
 		roll = 0; 
 		while(true) {
 			side = Math.floor(Math.random()*sides + 1); //assuming all sides are distinct and consecutive from 1 to sides
@@ -64,7 +64,7 @@ var dice_side = function (a,sides,n) {
 var dice_side_in_a_row = function (a,sides,n) {
 	var i, side, roll, sum, count; 
 	sum = 0;
-	for (i = 0; i < n; i++) { //for 6 sided dice it will have 60 trials per k; trialls = success rolls. 
+	for (i = 0; i < n; i++) { 
 		roll = 0;
 		count_roll = 0;  
 		while(true) {
@@ -88,7 +88,7 @@ var dice_side_in_a_row = function (a,sides,n) {
 var dice_a_b = function (a,b,sides,n) { //a is the first face, b is the second distinct face
 	var i, side, roll, sum, count; 
 	sum = 0;
-	for (i = 0; i < n; i++) { //for 6 sided dice it will have 60 trials per k; trialls = success rolls. 
+	for (i = 0; i < n; i++) { 
 		roll = 0;
 		count_roll = 0;  
 		while(true) {
