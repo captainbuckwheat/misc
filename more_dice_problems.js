@@ -83,8 +83,6 @@ var dice_side_in_a_row = function (a,sides,n) {
 
 //d)
 
-// Here we can see that the answer should be significantly lower than the answer to the previous problem becaue 6 & 5 have a particular order, while 6 & 6 do not. 
-
 var dice_a_b = function (a,b,sides,n) { //a is the first face, b is the second distinct face
 	var i, side, roll, sum, count; 
 	sum = 0;
