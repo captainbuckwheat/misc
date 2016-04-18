@@ -14,3 +14,11 @@ var birthday_in_a_room  = function(p, n) { // p is for people, n is for differen
 	}
 	return sum/n
 }
+
+var has_duplicates = function(array) {
+	var i, j; 
+	for (i = 0; i < array.length; i++) {
+		for (j = i+1; j < array.length; j++) if (array[i] === array[j]) return true;
+	}
+	return false;
+}
